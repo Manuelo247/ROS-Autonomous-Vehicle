@@ -77,8 +77,8 @@ Various experiments were conducted to test the different functionalities of the 
 5. Implementing line-following behavior using computer vision.
 
 <p align="center">
-  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.018.png" alt="Dataset" width="400">
-  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.021.png" alt="Camera" width="400">
+  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.018.png" alt="Dataset" width="200">
+  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.021.png" alt="Camera" width="200">
 </p>
 <p align="center">Fig. 7: Line follower on the highway</p>
 
