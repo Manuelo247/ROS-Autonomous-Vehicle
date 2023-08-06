@@ -1,8 +1,10 @@
 
 # Autonomous Vehicle Control with ROS and AI
 
-![Puzzlebot](Resources/puzzlebot.png)
-
+<p align="center">
+  <img src="Resources/puzzlebot.png" alt="Puzzlebot">
+</p>
+<p align="center">Fig. 1: Puzzlebot</p>
 
 ## Abstract
 
@@ -17,12 +19,12 @@ This project explores intelligent robotics' impact on autonomous driving and veh
 <p align="center">
   <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.001.png" alt="Track">
 </p>
-<p align="center">Fig. 1: Autopista escala para puzzlebot</p>
+<p align="center">Fig. 1: Scale highway for puzzlebot</p>
 
 <p align="center">
   <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.002.jpeg" alt="Signals">
 </p>
-<p align="center">Fig. 2: Senales utilizadas en la autopista</p>
+<p align="center">Fig. 2: Signals used on the highway</p>
 
 ## Methodology
 
@@ -49,7 +51,7 @@ Various experiments were conducted to test the different functionalities of the 
 <p align="center">
   <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.005.png" alt="Encoders">
 </p>
-<p align="center">Fig. 3: Revision de encoders</p>
+<p align="center">Fig. 3: Encoder check</p>
 
 2. Verifying the functionality of the Puzzlebot camera.
 
@@ -65,7 +67,7 @@ Various experiments were conducted to test the different functionalities of the 
     </tr>
   </table>
 </p>
-<p align="center">Fig. 4: Pruebas de la camara</p>
+<p align="center">Fig. 4: Camera tests</p>
 
 
 3. Creating a dataset of signals and traffic light colors for training the neural network.
@@ -73,14 +75,14 @@ Various experiments were conducted to test the different functionalities of the 
 <p align="center">
   <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.009.png" alt="Signals naural network">
 </p>
-<p align="center">Fig. 5: Correcta deteccion de las señales</p>
+<p align="center">Fig. 5: Accurate signal detection</p>
 
 4. Training the neural network and testing its ability to detect multiple signals simultaneously.
 
 <p align="center">
   <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.010.png" alt="signals simultaneously">
 </p>
-<p align="center">Fig. 6: Deteccion de varias señales al mismo tiempo</p>
+<p align="center">Fig. 6: Detection of multiple signals simultaneously</p>
 
 5. Implementing line-following behavior using computer vision.
 
@@ -96,7 +98,7 @@ Various experiments were conducted to test the different functionalities of the 
     </tr>
   </table>
 </p>
-<p align="center">Fig. 7: Seguidor de lineas en la autopista</p>
+<p align="center">Fig. 7: Line follower on the highway</p>
 
 7. Combining vision and control to enable the robot to follow lines while detecting and printing signal IDs.
 
