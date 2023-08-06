@@ -54,21 +54,11 @@ Various experiments were conducted to test the different functionalities of the 
 <p align="center">Fig. 3: Encoder check</p>
 
 2. Verifying the functionality of the Puzzlebot camera.
-
+   
 <p align="center">
-  <table>
-    <tr>
-      <td align="center">
-        <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.006.png" alt="Conexiones">
-      </td>
-      <td align="center">
-        <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.007.png" alt="Camera">
-      </td>
-    </tr>
-  </table>
-</p>
+  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.006.png" alt="Conexiones" width="400">
+  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.007.png" alt="Camera" width="400">
 <p align="center">Fig. 4: Camera tests</p>
-
 
 3. Creating a dataset of signals and traffic light colors for training the neural network.
 
@@ -87,16 +77,8 @@ Various experiments were conducted to test the different functionalities of the 
 5. Implementing line-following behavior using computer vision.
 
 <p align="center">
-  <table>
-    <tr>
-      <td align="center">
-         <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.018.png" alt="Dataset">
-      </td>
-      <td align="center">
-        <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.021.png" alt="Camera">
-      </td>
-    </tr>
-  </table>
+  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.018.png" alt="Dataset" width="400">
+  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.021.png" alt="Camera" width="400">
 </p>
 <p align="center">Fig. 7: Line follower on the highway</p>
 
