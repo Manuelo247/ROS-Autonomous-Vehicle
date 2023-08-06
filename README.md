@@ -91,3 +91,13 @@ The project achieved its goal of creating an autonomous driving system that foll
 ## Conclusion
 
 During this project, we explored the significance of computer vision, neural networks, control, and hardware in creating a functioning autonomous robot
+
+## Additional Resources
+
+- Code developed for the implementation: [Google Drive](https://drive.google.com/drive/folders/1HobdaGZhqcq2381vUu6SjBN_eLAoy7VG?usp=sharing)
+- Manchester Robotics video: [YouTube](https://youtu.be/hO4i0kJHNz0)
+- Final puzzlebot trajectory video: [YouTube](https://youtu.be/RpoSmSxaNiI)
+- Final presentation video: [YouTube](https://youtu.be/yPJffV-CdpI)
+- Original project report: [Google Drive](https://drive.google.com/file/d/1awVI48KacHq_NcCuWpxPL25lWduNNHRv/view?usp=drive_link)
+
+You can access the additional resources by following the provided links.
