@@ -1,0 +1,117 @@
+#!/usr/bin/env python
+############ Librerias ###########
+import cv2
+import numpy as np
+
+import rospy
+from cv_bridge import CvBridge
+
+from std_msgs.msg import Float32
+from sensor_msgs.msg import Image
+from geometry_msgs.msg import Twist
+
+
+img_msg_update = False
+
+def img_msg_callback(img_msg):
+    global imagen
+    global img_msg_update
+    bridge = CvBridge()
+    imagen = bridge.imgmsg_to_cv2(img_msg, desired_encoding="bgr8")
+    img_msg_update = True
+
+
+##################################
+#//////////////////////////////////////////////#
+############################### Ajustar imagen ##############################
+def ajustar_imagen(imagen):
+    height, width = imagen.shape[:2]
+    cut_height = height // 1.6
+    cut_width = width * 0.25
+    imagen = imagen[int(cut_height):, int(cut_width):int(width-cut_width)]
+    return imagen
+#############################################################################
+#//////////////////////////Medir error trayectoria/////////////////////////////#
+###################################################################################
+def medir_error_trayectoria(imagen):
+    suma = 0
+    cantidad = 0
+
+    imagen_suavizada = cv2.blur(imagen, (5, 5))
+    imagen_gris = cv2.cvtColor(imagen_suavizada, cv2.COLOR_BGR2GRAY)
+    _, imagen_binaria = cv2.threshold(imagen_gris, 127, 255, cv2.THRESH_BINARY)
+    # cv2.imshow('Imagen binaria', imagen_binaria)
+
+    for y in range(imagen.shape[1]):
+        if imagen_binaria[int(imagen.shape[0]*0.5), y] == 0:
+            cantidad += 1
+            suma += y
+
+    if cantidad > 0:
+        error = suma / cantidad
+        return error - imagen.shape[1]*0.5
+
+    return 0
+###########################################################################################
+#///////////////////////////////////Marcar imagen///////////////////////////////////////###
+###########################################################################################
+def marcar_imagen(imagen, error_medido):
+    centro_error = (int(imagen.shape[1]*0.5) + int(error_medido), int(imagen.shape[0]*0.5))
+    centro = (int(imagen.shape[1]*0.5), int(imagen.shape[0]*0.5))
+    
+    imagen_con_punto = np.copy(imagen)
+    cv2.circle(imagen_con_punto, centro_error, 5, (0, 0, 255), -1)
+    cv2.circle(imagen_con_punto, centro, 5, (0, 0, 255), -1)
+    
+    return imagen_con_punto
+
+
+if __name__=='__main__':   
+    rospy.init_node('linefollower')
+    rate = rospy.Rate(100)
+
+    camPub = rospy.Subscriber("/cam", Image, img_msg_callback)
+    errorPub = rospy.Publisher("/error", Float32, queue_size=10)
+    vel = rospy.Publisher("/cmd_vel", Twist, queue_size=10)
+
+    while not rospy.is_shutdown():
+        while not img_msg_update:
+            rospy.sleep(0.1)
+
+        imagen_ajustada = ajustar_imagen(imagen)
+        error_medido = medir_error_trayectoria(imagen_ajustada)
+        imagen_ajustada = marcar_imagen(imagen_ajustada, error_medido)
+
+        errorPub.publish(error_medido)
+	
+	pV = Twist()
+
+        vM = 0.06
+
+        krvM = vM / 2
+        kvaM = 0.5
+        errorM = 300.0
+        rv = (krvM * abs(error)) / errorM
+        va = (kvaM *         vM = 0.06
+
+        krvM = vM / 2
+        kvaM = 0.5
+        errorM = 300.0
+        rv = (krvM * abs(error)) / errorM
+        va = (kvaM * error) / errorM
+
+        vl = vM - rv) / errorM
+
+        vl = vM - rv
+
+	pV.linear.x = vl
+	pv.angular.z = va
+
+	vel.publish(pV)
+
+        #cv2.imshow('Imagen con error', imagen_ajustada)
+        #cv2.waitKey(1)
+        #print("Error medido:", error_medido)
+    ###################################################
+    rospy.spin()
+

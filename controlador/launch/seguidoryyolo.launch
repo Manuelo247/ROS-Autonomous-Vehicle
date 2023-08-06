@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node name="camara" pkg="camara" type="camara_node" output="screen"/>
+  <node name="follower" pkg="line_follower" type="seguidorpruebas.py" output="screen"/>
+  <node name="signals" pkg="yolo" type="yolo.py" output="screen"/>
+</launch>
+

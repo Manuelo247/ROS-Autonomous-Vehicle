@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node name="camara" pkg="camara" type="camara.py" output="screen"/>
+  <node name="signals" pkg="yolo" type="yolo.py" output="screen"/>
+</launch>
+
