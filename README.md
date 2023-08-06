@@ -56,8 +56,8 @@ Various experiments were conducted to test the different functionalities of the 
 2. Verifying the functionality of the Puzzlebot camera.
    
 <p align="center">
-  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.006.png" alt="Conexiones" width="400">
-  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.007.png" alt="Camera" width="400">
+  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.006.png" alt="Conexiones" width="200">
+  <img src="Resources/Aspose.Words.d739c641-0d41-4bde-b20a-66617666774a.007.png" alt="Camera" width="200">
 <p align="center">Fig. 4: Camera tests</p>
 
 3. Creating a dataset of signals and traffic light colors for training the neural network.
